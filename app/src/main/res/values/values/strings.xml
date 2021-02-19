@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ObviousTest</string>
+
+    <string name="no_internet_connectivity">No Internet Connectivity</string>
+    <string name="internal_error">We\'ve encountered an internal error!</string>
+    <string name="conflict_response">Conflict response</string>
+    <string name="unknown_error">Unknown error encountered!</string>
+    <string name="error_timeout">Request timed out!</string>
+    <string name="payload_too_large">This file is too large. Please select a smaller one.</string>
+    <string name="unauthorized_error">Unauthorised!</string>
+    <string name="invalid_credentials">The email/mobile number and password provided do not match an account in our system. Please try again.</string>
+    <string name="link_not_found">Link not found</string>
+    <string name="access_denied">Access denied</string>
+    <string name="server_error">Server Error</string>
+    <string name="retry">Retry</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="nothing_to_display">Nothing to display</string>
+    <string name="search">Search</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/gridFragment"
+        android:name="com.mobiiworld.mvvm.ui.grid.GridFragment"
+        android:label="grid_fragment"
+        tools:layout="@layout/grid_fragment">
+        <action
+            android:id="@+id/action_gridFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment">
+            <argument
+                android:name="position"
+                app:argType="integer"
+                app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.mobiiworld.mvvm.ui.detail.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment">
+        <argument
+            android:name="position"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.mobiiworld.mvvm.ui.movie.list.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.mobiiworld.mvvm.ui.movie.detail.MovieDetailFragment"
+        android:label="Movie Details"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="tasks.majestykapps.com/{movieId}" />
+    </fragment>
+</navigation>
